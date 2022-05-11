@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Db/Database.php';
+
 class Funcionario{
 
     /**
@@ -33,11 +35,30 @@ class Funcionario{
     public $salario;
 
     /**
+     * Data de criaçao do registro
+     * @var string
+     */
+    public $data;
+
+    /**
      * Método utilizado para cadastrar
      * @var boolean
      */
-
     public function Cadastrar() {
+
+        $this->data = date('Y-m-d H:i:s');
+
+        $obDatabase = new Database('funcionarios');
+        $this->id = $obDatabase->insert([
+                                            'nome'      => $this->nomeCompleto,
+                                            'registro'  => $this->registro,
+                                            'funcao'    => $this->funcao,
+                                            'salario'   => $this->salario,
+                                            'data'      => $this->data
+                                        ]);
+
+        #echo "<pre>"; print_r($this); echo "</pre>"; exit;
+        
 
     }
     
