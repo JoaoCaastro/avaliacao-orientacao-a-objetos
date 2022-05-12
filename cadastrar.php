@@ -1,18 +1,17 @@
 <?php
 
-    #echo "<pre>"; print_r($_POST); echo "</pre>"; exit;
 require_once 'entidade/Funcionario.php';
+$obFunc = new Funcionario;
 
-    if(isset($_POST['nome'],$_POST['funcao'],$_POST['salario'],$_POST['data-admissao'])){
-        $obFunc = new Funcionario;
+
+    if(isset($_POST['nome'],$_POST['registro'],$_POST['funcao'],$_POST['salario'])){
         $obFunc->nomeCompleto   = $_POST['nome'];
         $obFunc->registro       = $_POST['registro'];
         $obFunc->funcao         = $_POST['funcao'];
         $obFunc->salario        = $_POST['salario'];
         $obFunc->Cadastrar();
 
-    #echo "<pre>"; print_r($obFunc); echo "</pre>"; exit;
-
+        header('location: index.php?status=success');
         
     }
 
