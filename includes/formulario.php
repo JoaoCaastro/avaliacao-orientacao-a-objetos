@@ -6,7 +6,7 @@
             </a>
         </section>
 
-        <h2 class="mt-3">Cadastrar usuário</h2>
+        <h2 class="mt-3">Usuário</h2>
 
         <form method="post">
 
@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="submit" class="btn btn-success">Enviar</button>
             </div>
         </form>
 

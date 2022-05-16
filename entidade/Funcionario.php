@@ -61,13 +61,12 @@ class Funcionario{
             return true;
         }
         
-        public function atualizar(){
+        public function Atualizar(){
             return (new Database('funcionarios'))->update('id = '.$this->id,[
                                                                         'nome'      => $this->nomeCompleto,
                                                                         'registro'  => $this->registro,
                                                                         'funcao'    => $this->funcao,
-                                                                        'salario'   => $this->salario,
-                                                                        'data'      => $this->data
+                                                                        'salario'   => $this->salario
                                                                       ]);
           }
         
@@ -75,7 +74,7 @@ class Funcionario{
            * Método responsável por excluir a funcionario do banco
            * @return boolean
            */
-          public function excluir(){
+          public function Excluir(){
             return (new Database('funcionarios'))->delete('id = '.$this->id);
           }
         

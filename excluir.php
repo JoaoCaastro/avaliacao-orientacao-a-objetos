@@ -20,7 +20,7 @@ if(!$obFunc instanceof Funcionario){
 //VALIDAÇÃO DO POST
 if(isset($_POST['excluir'])){
 
-  $obFunc->excluir();
+  $obFunc->Excluir();
 
   header('location: index.php?status=success');
   exit;
