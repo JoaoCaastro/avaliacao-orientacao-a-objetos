@@ -12,3 +12,5 @@ MySQL e PDO orientado à objetos para separar o acesso ao banco de dados.
 
 CRUD
 Create, Read, Update, Delete
+
+Obs.: Dump do banco de dados está no diretório "BackupDb".
