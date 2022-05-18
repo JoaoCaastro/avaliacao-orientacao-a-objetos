@@ -14,7 +14,7 @@ class Funcionario{
      * Nome do funcionário
      * @var string
      */
-    public $nomeCompleto;
+    public $nome;
 
     /**
      * Funçao do funcionário
@@ -50,7 +50,7 @@ class Funcionario{
 
             $obDatabase = new Database('funcionarios');
             $this->id = $obDatabase->insert([
-                                            'nome'      => $this->nomeCompleto,
+                                            'nome'      => $this->nome,
                                             'registro'  => $this->registro,
                                             'funcao'    => $this->funcao,
                                             'salario'   => $this->salario,
@@ -63,7 +63,7 @@ class Funcionario{
         
         public function Atualizar(){
             return (new Database('funcionarios'))->update('id = '.$this->id,[
-                                                                        'nome'      => $this->nomeCompleto,
+                                                                        'nome'      => $this->nome,
                                                                         'registro'  => $this->registro,
                                                                         'funcao'    => $this->funcao,
                                                                         'salario'   => $this->salario

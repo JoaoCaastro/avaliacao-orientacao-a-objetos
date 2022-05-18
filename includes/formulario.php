@@ -12,7 +12,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Nome completo</label>
-                <input type="text" class="form-control" name="nome" value="<?=$obFunc->nomeCompleto?>">
+                <input type="text" class="form-control" name="nome" value="<?=$obFunc->nome?>">
             </div>
 
             <div class="mb-3">

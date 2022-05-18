@@ -5,7 +5,7 @@ $obFunc = new Funcionario;
 
 
     if(isset($_POST['nome'],$_POST['registro'],$_POST['funcao'],$_POST['salario'])){
-        $obFunc->nomeCompleto   = $_POST['nome'];
+        $obFunc->nome   = $_POST['nome'];
         $obFunc->registro       = $_POST['registro'];
         $obFunc->funcao         = $_POST['funcao'];
         $obFunc->salario        = $_POST['salario'];
